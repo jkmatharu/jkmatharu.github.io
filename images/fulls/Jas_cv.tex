@@ -1,0 +1,579 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[11pt]{article}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+\usepackage{times}
+\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+%\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=1.2in,     % Length of section titles
+%            marginparsep=.05in,       % Space between titles and text
+%            margin=0.7in,               % 1 inch margins
+%            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+\usepackage[paper=a4paper,
+            includefoot, % Uncomment to put page number above margin
+            marginparwidth=30.5mm,    % Length of section titles
+            marginparsep=1.5mm,       % Space between titles and text
+            margin=20mm,              % 25mm margins
+            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} %of %\protect\pageref*{LastPage} % +LP
+                    %\arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Curriculum Vitae of Jasleen Matharu}
+
+\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{2.5in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%\href{http://www.cse.osu.edu/}%
+%     {Department of Computer Science and Engineering} & \\
+%\href{http://www.osu.edu/}{The Ohio State University}
+
+Department of Physics \& Astronomy & Email: \email{jmatharu@tamu.edu}\\
+Texas A\&M University     \\
+College Station, Texas, 77843-4242 \\
+USA
+\end{tabular}
+
+%\section{Objective}
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+
+\section{Research Interests}
+
+Galaxy Evolution, Galaxy Clusters, High-Redshift Galaxies, Star Formation, \\ Quenching, Galaxy Growth, Cosmic Reionisation
+
+\section{Programming Skills}
+\begin{innerlist}
+\item Python
+\item LaTeX
+\item Some experience with IDL and Fortran.
+\end{innerlist}
+
+\section{Education}
+
+\href{http://www.ast.cam.ac.uk}{\textbf{Institute of Astronomy, University of Cambridge}},
+Cambridgeshire, United \\Kingdom
+\begin{outerlist}
+
+\item[] Ph.D.,
+             {Astronomy}, October 2015 - July 2019, 
+             \emph{Awarded:} 30th November 2019
+        \begin{innerlist}
+        \item Thesis Title: \emph{A Study on Quenching and Galaxy Growth in $z\sim1$ \\Clusters using HST WFC3 Grism Observations}
+        \item Primary Supervisor:
+                   \href{https://www.physics.yorku.ca/faculty-profiles/muzzin-adam/}{Dr Adam Muzzin}
+	\item Primary Supervisor (Cambridge):
+                   \href{https://www.ast.cam.ac.uk/people/paul.c.hewett}{Prof Paul C. Hewett}
+	\item Secondary Supervisor (Cambridge):
+		\href{https://www.ast.cam.ac.uk/people/matthew.auger}{Dr Matthew Auger}
+        \end{innerlist}
+
+\end{outerlist}
+\vspace{.1in}
+\href{http://www.ucl.ac.uk}{\textbf{University College London (UCL)}},
+Gower Street, London, United Kingdom
+\begin{outerlist}
+\item[] M.Sci.,
+        %\href{http://www.cset.mnsu.edu/mathstat/}
+             {Astrophysics} (First Class Honours), September 2011 - August 2015
+        \begin{innerlist}
+	\item Masters Project: \emph{Testing Cosmic Microwave Background Delensing}
+        \item Primary Supervisor (nominal): 
+		\href{https://www.ucl.ac.uk/cosmoparticle/hiranya-peiris/}{Prof Hiranya Peiris}
+	\item Secondary Supervisor: 
+		\href{}{Dr Aur\'elien Benoit-L\'evy}
+        \end{innerlist}
+
+\end{outerlist}
+
+\section{Research Experience}
+%\textbf{Postdoctoral research associate} \hfill {September 2019 - August 2022}
+\begin{innerlist}
+
+\item[] Department of Physics \& Astronomy,\\
+        Texas A\&M University\\
+        Supervisors: Prof. Casey Papovich \& Prof. Robert Kennicutt
+\end{innerlist}
+\textbf{Postdoctoral Research Associate} \hfill {September 2019 - present}
+%\begin{innerlist}
+
+%\item[] Division of Epidemiology,\\
+   %     University of Minnesota\\
+      %  Supervisors: Traci L. Toomey, Ph.D and Bradley P. Carlin, Ph.D
+%\end{innerlist}
+%\textbf{Research Assistant} \hfill {Sept 2008 to Aug 2010}
+%\begin{innerlist}
+%
+%\item[] Division of Biostatistics,\\
+   %     University of Minnesota\\
+      %  Supervisors: Katherine Huppler-Hullsiek, Ph.D and Jason V. Baker, M.D., M.S.
+%\end{innerlist}
+
+\section{Publication Statistics}
+\begin{innerlist}
+	\item Refereed first author publications: 1, total citations: 7
+	\item Refereed total publications: 2, total citations: 13
+	%\item h-index: 
+\end{innerlist}
+
+\section{Refereed Journal Publications}
+\vspace{-.1275in}
+\begin{bibsection}
+	\item  {\bf Matharu, J.}, Muzzin, A., Brammer, G.B., van der Burg, R.F.J., Auger, M.W., Hewett, P.C., van der Wel, A., van Dokkum, P., Balogh, M., Chan, J.C.C., Demarco, R., Marchesini, D., Nelson, E.J., Noble, A.G., Wilson, G. and Yee, H.K.C.  2019, ``HST/WFC3 grism observations of $z~\mathtt{\sim}~1$ clusters: The cluster versus field stellar mass--size relation and evidence for size growth of quiescent galaxies from minor mergers". Published in \emph{Monthly Notices of the Royal Astronomical Society}, Volume 484, Issue 1, Pages 595--617.
+
+    \item Noble, A.G., Muzzin, A., McDonald, M., Rudnick, G., {\bf Matharu, J.}, Cooper, M.C., Demarco, R., Lidman, C., Nantais, J., van Kampen, E., Webb, T.M.A., Wilson, G. and Yee, H.K.C.  2019, ``Resolving CO(2-1) in $z~\mathtt{\sim}~1.6$ Gas-Rich Cluster Galaxies with ALMA: Rotating Molecular Gas Disks with Possible Signatures of Gas Stripping". Published in \emph{The Astrophysical Journal}, Volume 870, Issue 2, article id. 56.
+
+
+\end{bibsection}
+
+%\section{Accepted Journal Publications}
+%\vspace{-.125in}
+%\begin{bibsection}
+
+%\end{bibsection}
+
+% Add a little space to nudge next ``Conference Publications'' marginpar
+% down to make room for tall ``Submitted Journal Publications''
+% marginpar. If there are enough submitted journal publications, this
+% space will not be needed (and should be removed).
+%\vspace{0.1in}
+
+\section{Papers in Preparation}
+\vspace{-.1in}
+\begin{bibsection}
+    \item {\bf Matharu, J.}, Muzzin, A., Brammer, G.B., van der Burg, R.F.J., Auger, M.W., Hewett, P.C., van der Wel, A., van Dokkum, P., Chan, J.C.C., Demarco, R., Marchesini, D., Nelson, E.J., Noble, A.G. and Wilson, G.  2019, ``HST/WFC3 grism observations of $z~\mathtt{\sim}~1$ clusters: poststarburst galaxies and evidence for evolution in the mass--size relation of quiescent galaxies from recently quenched galaxies". Submitted to \emph{Monthly Notices of the Royal Astronomical Society}.
+
+
+\end{bibsection}
+
+\section{Presentations}
+\begin{innerlist}
+\item Extragalactic Lunch, {\it Understanding Environmental Quenching at High-redshift}, Mitchell Institute for Fundamental Physics and Astronomy, Texas A\&M \\University, College Station, TX, USA. \hfill Oct 2019
+\item CLEAR Collaboration meeting, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth and quenching}, Space Telescope Science Institute, Baltimore, USA. \hfill Jun 2019
+\item Dunlap tea, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Dunlap Institute for Astronomy \& Astrophysics, University of Toronto, Canada. \hfill Oct 2018
+\item Lars Hernquist's group meeting, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Harvard-Smithsonian Center for Astrophysics, Cambridge, \\USA. \hfill Oct 2018
+\item ITC Lunch, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Institute for Theory and\\ Computation, Harvard-Smithsonian Center for Astrophysics, Cambridge,\\ USA. \hfill Oct 2018
+\item Lunch talk, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Yale University, New Haven, USA.  \hfill Oct 2018
+\item Lunch talk, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Space Telescope Science \\Institute, Baltimore, USA. \hfill Oct 2018
+\item Lunch talk, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, University of Nottingham, \\ Nottingham, UK. \hfill Sep 2018
+\item Lunch talk, {\it The cluster vs. field stellar mass-size relation at $z~\mathtt{\sim}~1$: implications for galaxy size growth with decreasing redshift}, Leiden Observatory, Leiden, Netherlands. \hfill Sep 2018
+\item Poster, {\it Galaxy Evolution \& the Mass-Size Relation in $z~\mathtt{\sim}~1$ Clusters}, Galaxy Evolution Across Time, proceedings of a conference held in Paris, \\France. \hfill Jun 2017
+\item Seminar, {\it The shut down of star formation in galaxies at $z~\mathtt{\sim}~1$: obtaining direct evidence for its environmental dependence}, Institute of Astronomy, Cambridge, UK. \hfill Feb 2017
+
+\end{innerlist}
+
+\section{Awards}
+\begin{innerlist}
+\item Churchill College Travel Grant Award, Talks Tour to present PhD work, \\Nottingham (UK), Leiden (The Netherlands), Baltimore, New Haven and \\Cambridge (USA) and Toronto (Canada) \hfill Oct 2018
+\item Churchill College Travel Grant Award, Conference on Galaxy Evolution Across Time, Paris (France) \hfill May 2017
+\item Science and Technology Facilities Council (STFC) Quota Award to undertake research in Astrophysics at the Institute of Astronomy, Cambridge for up to 3.5 years \hfill Oct 2015
+\end{innerlist}
+
+%\halfblankline
+
+%Student Awards --- Institute of Astronomy, University of Cambridge
+%\begin{innerlist}
+%\item Outstanding Teaching Assistant Award\hfill May 2012
+%\item Outstanding Research Assistant Award\hfill May 2011
+%\item James R. Boen Student Achievement Award\hfill May 2009
+%\end{innerlist}
+
+%\halfblankline
+
+%Student Awards
+%\begin{innerlist}
+%\item Science and Technologies Facilities Council (STFC) Quota Award
+%\begin{innerlist}
+    %\item Awarded in October 2015 to undertake research in astrophysics for up to three and a half years at the Institute of Astronomy, University of Cambridge.
+%\end{innerlist}
+%\end{innerlist}
+
+
+
+\section{Undergraduate supervision}
+
+%\textbf{Maths IA Supervisor, Churchill College} \hfill {Academic year 2016--17}
+\begin{innerlist}
+\item[] \textbf{Maths IA Supervisor, Churchill College} \hfill {Academic year 2016--17} \\
+\item[] Weekly two-on-one and one-on-one teaching of undergraduate students in their first year mathematics course.
+\end{innerlist}
+
+
+
+\section{Outreach}
+Institute of Astronomy, University of Cambridge \hfill Jul 2018
+\begin{innerlist}
+\item Gave two lectures on the topic of ``Our Place in the Universe" and the workings of the the Northumberland Telescope to two groups of local and overseas students aged between 13 - 14 and 15 - 18.
+\end{innerlist}
+Institute of Astronomy, University of Cambridge \hfill Mar 2016
+\begin{innerlist}
+\item Organised an activity for the Cambridge Science Festival where by children can ``build" a galaxy. 
+\end{innerlist}
+%November 2015, Institute of Astronomy, University of Cambridge
+%\begin{innerlist}
+%\item Assisted in delivering a presentation about the Solar System to a group of the 2nd Cottenham Scouts. Age range 11 - 17. Assisted in explaining the workings of the Northumberland and 16-inch Telescopes. Answered general questions about space science and astrophysics.
+%\end{innerlist}
+
+
+
+%\halfblankline
+
+%University of Minnesota
+%\begin{innerlist}
+%\item Mostly Markov Chain Seminar Series \hfill Nov 2011
+%\item School of Public Health Research Day \hfill Apr 2011
+%\end{innerlist}
+
+
+%\section{Teaching Experience}
+
+%\textbf{Teaching Assistant} \hfill {Springs 2011--12}
+%Co-instructor \hfill {Summer 2013}
+%\begin{innerlist}
+%\item[] PUBH 6400 - Topics in Hierarchical Bayesian Analysis\\
+   %     with Bradley P. Carlin\\
+      %  Division of Biostatistics,\\
+        %University of Minnesota
+%\end{innerlist}
+
+%Teaching Assistant \hfill {Springs 2011--12}
+%\begin{innerlist}
+%
+%\item[] PUBH 7440 - Introduction to Bayesian Analysis\\
+   %     Instructor: Bradley P. Carlin, Ph.D\\
+      %  Division of Biostatistics,\\
+        %University of Minnesota
+%\end{innerlist}
+
+
+
+
+
+
+%\section{Service}
+%Recruiting Committee, Division of Biostatistics \hfill {May 2010 -- Present}
+%\begin{innerlist}
+   % \item Assist with planning of annual Division of Biostatistics Open House and Admitted Student Visit %Days
+   % \item Meet with prospective and admitted students %; answer questions from a student's perspective
+%\end{innerlist}
+
+%\halfblankline
+
+%Student Member of Search Committee for the \hfill {June 2010 -- Aug 2010}\\
+%SPH Coordinator of Recruitment and Student Leadership
+%\begin{innerlist}
+   % \item Assisted in job search for the SPH Coordinator of Recruitment and Student Leadership
+    %\item Reviewed applications, conducted interviews
+%\end{innerlist}
+
+%\section{References}
+
+%Fourth year project leader: \href{http://www2.iap.fr/users/benoitl/Home.html}{Dr Aur\'elien Benoit-L\'evy}
+%\begin{innerlist}
+%\item[] Postdoctoral researcher in observational cosmology (2012 - 2015)
+
+%Department of Physics and Astronomy
+
+%University College London
+
+%Gower Place
+
+%London  \hfill {Phone: +44 (0) 20 7679 7340}\\
+%WC1E 6BT  \hfill{E-mail: ucapab2@ucl.ac.uk}\\
+%\end{innerlist}
+
+%\halfblankline
+
+%Personal Tutor at UCL: Prof Michael J Barlow
+%\begin{innerlist}
+%\item[] Professor and Head of Astrophysics
+
+%Astrophysics Group
+
+%Department of Physics and Astronomy
+
+%University College London
+
+%3rd Floor, 132 Hampstead Road
+
+%London  \hfill {Phone: +44 (0)20 3549 5810}\\
+%NW1 2PS  \hfill{E-mail: mjb@star.ucl.ac.uk}\\
+%\end{innerlist}
+
+\halfblankline
+
+%Physics and Astronomy Programme Tutor at UCL: Dr Stan Zochowski
+%\begin{innerlist}
+%\item[] Senior Lecturer and Tutor to Undergraduate Students
+
+%Department of Physics and Astronomy
+
+%University College London
+
+%Gower Street
+
+%London  \hfill {Phone: +44 (0) 20 7679 7038}\\
+%WC1E 6BT  \hfill{E-mail: s.zochowski@ucl.ac.uk}\\
+%\end{innerlist}
+
+%\section{Hardware and Software Skills}
+\begin{comment}
+Computer Programming:
+
+\begin{innerlist}
+    \item C, C$+$$+$, Java, JavaScript, NetLogo, Pascal, Perl, PHP,
+        Lisp, UNIX shell scripting (including POSIX.2), GNU make,
+        AppleScript, SQL, MySQL, \Matlab, Maple, Mathematica, and others
+\end{innerlist}
+
+\halfblankline
+\end{comment}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%----------------------------------------------------------------------%
