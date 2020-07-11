@@ -20,7 +20,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease; }
-  a:hover {
+  a:hover {color: #E9A139; 
     text-decoration: none; }
 
 h1, h2, h3, h4, h5,
@@ -73,8 +73,8 @@ body:after {
     border-color: #8C274A;
     color: #fff; }
     .btn.btn-primary:hover {
-      background: #000;
-      border-color: #000;
+      background: #E9A139;
+      border-color: #E9A139;
       color: #fff; }
     .btn.btn-primary.btn-black--hover:hover {
       background: #666666;
