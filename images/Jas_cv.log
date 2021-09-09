@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  15 AUG 2021 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  9 SEP 2021 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -352,81 +352,130 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--324
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (19.09518pt too wide) in paragraph at lines 363--364
-[]\OT1/phv/m/n/10.95 Brammer, Gabe and \OT1/phv/b/n/10.95 Math-aru, Jasleen\OT1
-/phv/m/n/10.95 , 2021. ``Gri-zli: Re-lease 2021". Pub-lished
- []
-
-
-Overfull \hbox (4.88786pt too wide) in paragraph at lines 367--368
+Overfull \hbox (4.88786pt too wide) in paragraph at lines 365--366
 \OT1/phv/m/n/10.95 be-tween black-hole growth and host-galaxy com-pact-ness amo
 ng star-forming
  []
 
 
-Overfull \hbox (15.8702pt too wide) in paragraph at lines 367--368
+Overfull \hbox (15.8702pt too wide) in paragraph at lines 365--366
 \OT1/phv/m/n/10.95 galax-ies". Ac-cepted for Pub-li-ca-tion in \OT1/phv/m/sl/10
 .95 Monthly No-tices of the Royal As-tro-nom-i-cal
  []
 
 
-Overfull \hbox (4.07909pt too wide) in paragraph at lines 376--377
+Overfull \hbox (4.07909pt too wide) in paragraph at lines 374--375
 \OT1/phv/m/n/10.95 Sig-na-tures of Gas Strip-ping". Pub-lished in \OT1/phv/m/sl
 /10.95 The As-tro-phys-i-cal Jour-nal\OT1/phv/m/n/10.95 , Vol-ume
  []
 
 
-Overfull \hbox (5.89864pt too wide) in paragraph at lines 404--405
+Overfull \hbox (19.09518pt too wide) in paragraph at lines 384--385
+[]\OT1/phv/m/n/10.95 Brammer, Gabe and \OT1/phv/b/n/10.95 Math-aru, Jasleen\OT1
+/phv/m/n/10.95 , 2021. ``Gri-zli: Re-lease 2021". Pub-lished
+ []
+
+
+Overfull \hbox (21.63608pt too wide) in paragraph at lines 394--395
+\OT1/phv/m/n/10.95 A.G., Rud-nick, G., van der Wel, A., Wil-son, G. and Yee, H.
+K.C. 2021, ``HST/WFC3
+ []
+
+
+Overfull \hbox (17.48872pt too wide) in paragraph at lines 394--395
+\OT1/phv/m/n/10.95 grism ob-ser-va-tions of $\OML/cmm/m/it/10.95 z [][] []\OT1/
+cmr/m/n/10.95 1$ \OT1/phv/m/n/10.95 clus-ters: Ev-i-dence for rapid outside-in 
+en-vi-ron-men-tal
+ []
+
+
+Overfull \hbox (24.9914pt too wide) in paragraph at lines 394--395
+\OT1/phv/m/n/10.95 quench-ing from spa-tially re-solved H-Alpha maps". Sub-mit-
+ted to \OT1/phv/m/sl/10.95 The As-tro-phys-i-cal
+ []
+
+[2]
+Overfull \hbox (4.84369pt too wide) in paragraph at lines 396--397
+[]\OT1/phv/m/n/10.95 Cleri, N. J., Trump, J.R., Back-haus, B.E., Mom-cheva, I.,
+ Pa-povich, C., Si-mons,
+ []
+
+
+Overfull \hbox (17.06953pt too wide) in paragraph at lines 398--399
+\OT1/phv/m/n/10.95 Estrada-Carpenter., V., Back-haus, B.E., Cleri, N. J., Fin-k
+lestein, S.L., Gi-avalisco,
+ []
+
+
+Overfull \hbox (4.84312pt too wide) in paragraph at lines 398--399
+\OT1/phv/m/n/10.95 Phase Metal-lic-ity Gra-di-ents of Star-Forming Galax-ies at
+ 0.6<z<2.6". Sub-mit-ted
+ []
+
+
+Overfull \hbox (13.03664pt too wide) in paragraph at lines 436--437
+[]\OT1/phv/b/n/10.95 [COVID-19] \OT1/phv/m/n/10.95 School of Phys-i-cal Sci-enc
+es Sem-i-nar, \OT1/phv/m/sl/10.95 Re-veal-ing how Galaxy Growth,
+ []
+
+
+Overfull \hbox (1.72269pt too wide) in paragraph at lines 436--437
+\OT1/phv/m/sl/10.95 Star For-ma-tion and Quench-ing pro-ceed in High Red-shift 
+Galax-ies with Spa-tially
+ []
+
+
+Overfull \hbox (5.89864pt too wide) in paragraph at lines 437--438
 \OT1/phv/m/n/10.95 Eu-ro-pean South-ern Ob-ser-va-tory, Garch-ing, Ger-many and
  Harvard-Smithsonian
  []
 
-[2]
-Overfull \hbox (4.62428pt too wide) in paragraph at lines 408--409
+
+Overfull \hbox (4.62428pt too wide) in paragraph at lines 441--442
 []\OT1/phv/b/n/10.95 [COVID-19][Contributed] \OT1/phv/m/n/10.95 237th Meet-ing 
 of the Amer-i-can As-tro-nom-i-cal So-ci-ety,
  []
 
 
-Overfull \hbox (11.21854pt too wide) in paragraph at lines 410--411
+Overfull \hbox (11.21854pt too wide) in paragraph at lines 443--444
 \OT1/phv/m/sl/10.95 stud-ies with space-based slit-less spec-troscopy\OT1/phv/m
 /n/10.95 , Mitchell In-sti-tute for Fun-da-men-tal
  []
 
-
-Overfull \hbox (1.45084pt too wide) in paragraph at lines 414--415
+[3]
+Overfull \hbox (1.45084pt too wide) in paragraph at lines 447--448
 []\OT1/phv/m/n/10.95 Extragalactic Lunch, \OT1/phv/m/sl/10.95 Un-der-stand-ing 
 En-vi-ron-men-tal Quench-ing at High-redshift\OT1/phv/m/n/10.95 ,
  []
 
-[3]
-Overfull \hbox (12.76022pt too wide) in paragraph at lines 435--436
+[4]
+Overfull \hbox (12.76022pt too wide) in paragraph at lines 468--469
 \OT1/phv/m/n/10.95 214: \OT1/phv/m/sl/10.95 ``To-wards a Deeper Un-der-stand-in
 g of Galaxy Quench-ing: First Mea-sure-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
-[4] Excluding 'comment' comment. 
+[5] Excluding 'comment' comment. 
 AED: lastpage setting LastPage
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
  (./Jas_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 664.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
 Package rerunfilecheck Info: File `Jas_cv.out' has not changed.
-(rerunfilecheck)             Checksum: 4E4850A8CFD740CDC57345C0DD374282;869.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
+(rerunfilecheck)             Checksum: F061BD77A6093843A1B9BBDD98AA573A;1077.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 664.
  ) 
 Here is how much of TeX's memory you used:
- 5925 strings out of 492616
- 88462 string characters out of 6129482
+ 5936 strings out of 492616
+ 88566 string characters out of 6129482
  193089 words of memory out of 5000000
- 9779 multiletter control sequences out of 15000+600000
+ 9782 multiletter control sequences out of 15000+600000
  16215 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,12n,43p,835b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -437,10 +486,10 @@ ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Jas_cv.pdf (5 pages, 74029 bytes).
+Output written on Jas_cv.pdf (6 pages, 76464 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
