@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  9 SEP 2021 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  14 SEP 2021 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -352,49 +352,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--324
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (4.88786pt too wide) in paragraph at lines 365--366
-\OT1/phv/m/n/10.95 be-tween black-hole growth and host-galaxy com-pact-ness amo
-ng star-forming
- []
-
-
-Overfull \hbox (15.8702pt too wide) in paragraph at lines 365--366
-\OT1/phv/m/n/10.95 galax-ies". Ac-cepted for Pub-li-ca-tion in \OT1/phv/m/sl/10
-.95 Monthly No-tices of the Royal As-tro-nom-i-cal
- []
-
-
-Overfull \hbox (4.07909pt too wide) in paragraph at lines 374--375
-\OT1/phv/m/n/10.95 Sig-na-tures of Gas Strip-ping". Pub-lished in \OT1/phv/m/sl
-/10.95 The As-tro-phys-i-cal Jour-nal\OT1/phv/m/n/10.95 , Vol-ume
- []
-
-
-Overfull \hbox (19.09518pt too wide) in paragraph at lines 384--385
-[]\OT1/phv/m/n/10.95 Brammer, Gabe and \OT1/phv/b/n/10.95 Math-aru, Jasleen\OT1
-/phv/m/n/10.95 , 2021. ``Gri-zli: Re-lease 2021". Pub-lished
- []
-
-
-Overfull \hbox (21.63608pt too wide) in paragraph at lines 394--395
+Overfull \hbox (21.63608pt too wide) in paragraph at lines 363--364
 \OT1/phv/m/n/10.95 A.G., Rud-nick, G., van der Wel, A., Wil-son, G. and Yee, H.
 K.C. 2021, ``HST/WFC3
  []
 
 
-Overfull \hbox (17.48872pt too wide) in paragraph at lines 394--395
+Overfull \hbox (17.48872pt too wide) in paragraph at lines 363--364
 \OT1/phv/m/n/10.95 grism ob-ser-va-tions of $\OML/cmm/m/it/10.95 z [][] []\OT1/
 cmr/m/n/10.95 1$ \OT1/phv/m/n/10.95 clus-ters: Ev-i-dence for rapid outside-in 
 en-vi-ron-men-tal
  []
 
 
-Overfull \hbox (24.9914pt too wide) in paragraph at lines 394--395
-\OT1/phv/m/n/10.95 quench-ing from spa-tially re-solved H-Alpha maps". Sub-mit-
-ted to \OT1/phv/m/sl/10.95 The As-tro-phys-i-cal
+Overfull \hbox (4.88786pt too wide) in paragraph at lines 367--368
+\OT1/phv/m/n/10.95 be-tween black-hole growth and host-galaxy com-pact-ness amo
+ng star-forming
+ []
+
+
+Overfull \hbox (15.8702pt too wide) in paragraph at lines 367--368
+\OT1/phv/m/n/10.95 galax-ies". Ac-cepted for Pub-li-ca-tion in \OT1/phv/m/sl/10
+.95 Monthly No-tices of the Royal As-tro-nom-i-cal
+ []
+
+
+Overfull \hbox (4.07909pt too wide) in paragraph at lines 376--377
+\OT1/phv/m/n/10.95 Sig-na-tures of Gas Strip-ping". Pub-lished in \OT1/phv/m/sl
+/10.95 The As-tro-phys-i-cal Jour-nal\OT1/phv/m/n/10.95 , Vol-ume
  []
 
 [2]
+Overfull \hbox (19.09518pt too wide) in paragraph at lines 386--387
+[]\OT1/phv/m/n/10.95 Brammer, Gabe and \OT1/phv/b/n/10.95 Math-aru, Jasleen\OT1
+/phv/m/n/10.95 , 2021. ``Gri-zli: Re-lease 2021". Pub-lished
+ []
+
+
 Overfull \hbox (4.84369pt too wide) in paragraph at lines 396--397
 []\OT1/phv/m/n/10.95 Cleri, N. J., Trump, J.R., Back-haus, B.E., Mom-cheva, I.,
  Pa-povich, C., Si-mons,
@@ -486,7 +480,7 @@ ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Jas_cv.pdf (6 pages, 76464 bytes).
+Output written on Jas_cv.pdf (6 pages, 76354 bytes).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
  156 compressed objects within 2 object streams
