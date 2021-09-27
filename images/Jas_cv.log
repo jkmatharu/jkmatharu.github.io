@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 SEP 2021 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  26 SEP 2021 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,39 +365,39 @@ en-vi-ron-men-tal
  []
 
 
-Overfull \hbox (4.88786pt too wide) in paragraph at lines 368--369
+Overfull \hbox (17.06953pt too wide) in paragraph at lines 366--367
+\OT1/phv/m/n/10.95 Estrada-Carpenter., V., Back-haus, B.E., Cleri, N. J., Fin-k
+lestein, S.L., Gi-avalisco,
+ []
+
+
+Overfull \hbox (4.88786pt too wide) in paragraph at lines 370--371
 \OT1/phv/m/n/10.95 be-tween black-hole growth and host-galaxy com-pact-ness amo
 ng star-forming
  []
 
 
-Overfull \hbox (15.8702pt too wide) in paragraph at lines 368--369
+Overfull \hbox (15.8702pt too wide) in paragraph at lines 370--371
 \OT1/phv/m/n/10.95 galax-ies". Ac-cepted for Pub-li-ca-tion in \OT1/phv/m/sl/10
 .95 Monthly No-tices of the Royal As-tro-nom-i-cal
  []
 
 
-Overfull \hbox (4.07909pt too wide) in paragraph at lines 377--378
+Overfull \hbox (4.07909pt too wide) in paragraph at lines 379--380
 \OT1/phv/m/n/10.95 Sig-na-tures of Gas Strip-ping". Pub-lished in \OT1/phv/m/sl
 /10.95 The As-tro-phys-i-cal Jour-nal\OT1/phv/m/n/10.95 , Vol-ume
  []
 
 [2]
-Overfull \hbox (19.09518pt too wide) in paragraph at lines 387--388
+Overfull \hbox (19.09518pt too wide) in paragraph at lines 389--390
 []\OT1/phv/m/n/10.95 Brammer, Gabe and \OT1/phv/b/n/10.95 Math-aru, Jasleen\OT1
 /phv/m/n/10.95 , 2021. ``Gri-zli: Re-lease 2021". Pub-lished
  []
 
 
-Overfull \hbox (4.84369pt too wide) in paragraph at lines 397--398
+Overfull \hbox (4.84369pt too wide) in paragraph at lines 399--400
 []\OT1/phv/m/n/10.95 Cleri, N. J., Trump, J.R., Back-haus, B.E., Mom-cheva, I.,
  Pa-povich, C., Si-mons,
- []
-
-
-Overfull \hbox (17.06953pt too wide) in paragraph at lines 399--400
-\OT1/phv/m/n/10.95 Estrada-Carpenter., V., Back-haus, B.E., Cleri, N. J., Fin-k
-lestein, S.L., Gi-avalisco,
  []
 
 
@@ -472,7 +472,7 @@ Here is how much of TeX's memory you used:
  9782 multiletter control sequences out of 15000+600000
  16215 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,13n,43p,835b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,13n,43p,835b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -480,7 +480,7 @@ ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Jas_cv.pdf (6 pages, 77389 bytes).
+Output written on Jas_cv.pdf (6 pages, 77536 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams
